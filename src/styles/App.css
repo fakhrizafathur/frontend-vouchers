@@ -169,6 +169,9 @@ table td {
     display: block; /* Tampilkan tombol hanya di layar kecil */
   }
 
+  .title {
+    display: none;
+  }
   .sidebar {
     position: fixed;
     top: 0;
