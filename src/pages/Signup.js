@@ -42,7 +42,7 @@ function Signup() {
 
   const handleLoginClick = () => {
     // Menavigasi ke halaman history (misalnya)
-    navigate("/login");
+    navigate("/");
   };
 
   return (
@@ -61,18 +61,3 @@ function Signup() {
 }
 
 export default Signup;
-//   return (
-//     <div>
-//       <h2>Signup</h2>
-//       <form onSubmit={handleSubmit}>
-//         <input type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} required />
-//         <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-//         <input type="text" placeholder="Nama" value={nama} onChange={(e) => setNama(e.target.value)} required />
-//         <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
-//         <button type="submit">Signup</button>
-//       </form>
-//     </div>
-//   );
-// }
-
-// export default Signup;
