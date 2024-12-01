@@ -41,7 +41,6 @@ function Signup() {
   };
 
   const handleLoginClick = () => {
-    // Menavigasi ke halaman history (misalnya)
     navigate("/");
   };
 
