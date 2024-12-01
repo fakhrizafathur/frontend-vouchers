@@ -39,6 +39,11 @@ function Login() {
     }
   };
 
+  const handleSignupClick = () => {
+    // Menavigasi ke halaman history (misalnya)
+    navigate("/signup");
+  };
+
   return (
     <div className="container">
       <h2>Login</h2>
@@ -48,7 +53,7 @@ function Login() {
         <input type="submit" value="Login" />
         {errorMessage && <div className="error-message">{errorMessage}</div>}
       </form>
-      <a href="/frontend-vouchers/signup">Belum punya akun? Daftar sekarang</a>
+      <a onClick={handleSignupClick}>Belum punya akun? Daftar sekarang</a>
     </div>
   );
 }
