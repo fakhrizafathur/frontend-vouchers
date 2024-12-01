@@ -1,0 +1,208 @@
+/* App.css */
+.app-container {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #4caf50;
+  color: white;
+}
+
+.header .logo {
+  font-size: 24px;
+}
+
+.header .title {
+  font-size: 24px;
+}
+
+.header .btn-history {
+  background-color: #fff;
+  color: #4caf50;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.main-content {
+  display: flex;
+  margin-top: 20px;
+}
+
+.sidebar {
+  width: 200px;
+  padding: 10px;
+  background-color: #f4f4f4;
+}
+
+.sidebar h3 {
+  font-size: 20px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+.body {
+  flex: 1;
+  padding: 20px;
+}
+
+.voucher-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.voucher-item {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.voucher-item img {
+  width: 100%;
+  height: auto;
+}
+
+.voucher-item button {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.voucher-item button:hover {
+  background-color: #45a049;
+}
+
+.history-page {
+  display: flex;
+  flex-direction: column;
+}
+.header .home-button {
+  background-color: #fff;
+  color: #4caf50;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+.history-content {
+  display: flex;
+  padding: 20px;
+}
+
+.history-body {
+  flex: 3;
+}
+
+.history-sidebar {
+  flex: 1;
+  padding-left: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.btn-remove {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.btn-remove:hover {
+  background-color: #cc0000;
+}
+
+/* Tombol Logout berada di bagian bawah sidebar */
+.sidebar .logout {
+  margin-top: auto; /* Tombol akan ditaruh di bawah */
+  padding: 10px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.sidebar .logout:hover {
+  background-color: #e60000;
+}
+
+/* Tombol Hamburger */
+.hamburger {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  display: none; /* Sembunyikan tombol secara default */
+}
+
+/* Media Query untuk Mobile */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* Tampilkan tombol hanya di layar kecil */
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px; /* Sidebar tersembunyi di awal */
+    width: 250px;
+    height: 100%;
+    background-color: #f4f4f4;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    z-index: 1000;
+    transition: left 0.3s ease;
+  }
+
+  .sidebar.active {
+    left: 0; /* Tampilkan sidebar */
+  }
+  .voucher-list {
+    grid-template-columns: 1fr; /* Ubah menjadi 1 voucher per baris */
+  }
+
+  .history-sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px; /* Sidebar tersembunyi di awal */
+    width: 250px;
+    height: 100%;
+    background-color: #f4f4f4;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    z-index: 1000;
+    transition: left 0.3s ease;
+  }
+
+  .history-sidebar.active {
+    left: 0; /* Tampilkan sidebar */
+  }
+}
