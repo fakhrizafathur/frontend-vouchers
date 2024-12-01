@@ -48,7 +48,7 @@ function Login() {
         <input type="submit" value="Login" />
         {errorMessage && <div className="error-message">{errorMessage}</div>}
       </form>
-      <a href="/signup">Belum punya akun? Daftar sekarang</a>
+      <a href="/frontend-vouchers/signup">Belum punya akun? Daftar sekarang</a>
     </div>
   );
 }
