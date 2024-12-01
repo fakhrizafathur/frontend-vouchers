@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
   const [vouchers, setVouchers] = useState([]);
   const [categories, setCategories] = useState([]);
   const [filteredVouchers, setFilteredVouchers] = useState([]);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const navigate = useNavigate();
 
   // Ambil token JWT dari localStorage atau sesi untuk memastikan pengguna login
   const token = localStorage.getItem("token");
@@ -66,14 +68,14 @@ function Home() {
 
   const handleHistoryClick = () => {
     // Menavigasi ke halaman history (misalnya)
-    window.location.href = "/history"; // Sesuaikan dengan routing aplikasi React
+    navigate("/history"); // Sesuaikan dengan routing aplikasi React
   };
 
   const handleLogout = () => {
     // Menghapus token JWT dari localStorage
     localStorage.removeItem("token");
     // Redirect ke halaman login
-    window.location.href = "/";
+    navigate("/");
   };
 
   const toggleSidebar = () => {

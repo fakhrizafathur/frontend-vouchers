@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 function History() {
   const [history, setHistory] = useState([]);
   const [categorySummary, setCategorySummary] = useState({});
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetchHistory();
@@ -32,6 +34,11 @@ function History() {
     });
   };
 
+  const handleHomeClick = () => {
+    // Menavigasi ke halaman history (misalnya)
+    navigate("/history"); // Sesuaikan dengan routing aplikasi React
+  };
+
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
@@ -43,7 +50,7 @@ function History() {
           &#9776;
         </button>
         <div className="title">History</div>
-        <button className="home-button" onClick={() => (window.location.href = "/home")}>
+        <button className="home-button" onClick={handleHomeClick}>
           Home
         </button>
       </header>
