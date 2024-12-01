@@ -8,7 +8,7 @@ import "./styles/App.css";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/frontend-vouchers">
       <Routes>
         <Route path="/home" element={<Home />} />
         <Route path="/signup" element={<Signup />} />
