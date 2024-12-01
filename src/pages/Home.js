@@ -14,11 +14,11 @@ function Home() {
       // Jika token tidak ada, arahkan pengguna ke halaman login
       window.location.href = "/";
     }
-    fetch("http://fathur.pythonanywhere.com/api/categories")
+    fetch("https://fathur.pythonanywhere.com/api/categories")
       .then((res) => res.json())
       .then((data) => setCategories(["All", ...data]));
 
-    fetch("http://fathur.pythonanywhere.com/api/vouchers")
+    fetch("https://fathur.pythonanywhere.com/api/vouchers")
       .then((res) => res.json())
       .then((data) => {
         setVouchers(data);
@@ -40,7 +40,7 @@ function Home() {
   };
 
   const handleClaimClick = (id_voucher) => {
-    fetch(`http://fathur.pythonanywhere.com/api/claim/${id_voucher}`, {
+    fetch(`https://fathur.pythonanywhere.com/api/claim/${id_voucher}`, {
       method: "POST",
     })
       .then((response) => {
@@ -120,7 +120,7 @@ function Home() {
             {filteredVouchers.map((voucher) => (
               <div className="voucher-grid-item" key={voucher.id_voucher}>
                 <div className="voucher-item">
-                  <img src={`http://fathur.pythonanywhere.com/static/${voucher.foto}`} alt={voucher.nama} />
+                  <img src={`https://fathur.pythonanywhere.com/static/${voucher.foto}`} alt={voucher.nama} />
                   <h4>{voucher.nama}</h4>
                   <button onClick={() => handleClaimClick(voucher.id_voucher)}>Claim</button>
                 </div>

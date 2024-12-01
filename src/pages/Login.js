@@ -17,7 +17,7 @@ function Login() {
     };
 
     try {
-      const response = await fetch("http://fathur.pythonanywhere.com/api/login", {
+      const response = await fetch("https://fathur.pythonanywhere.com/api/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

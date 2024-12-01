@@ -12,19 +12,19 @@ function History() {
 
   const fetchHistory = () => {
     // fetch("http://localhost:5000/api/history")
-    fetch("http://fathur.pythonanywhere.com/api/history")
+    fetch("https://fathur.pythonanywhere.com/api/history")
       .then((res) => res.json())
       .then((data) => setHistory(data));
   };
 
   const fetchCategorySummary = () => {
-    fetch("http://fathur.pythonanywhere.com/api/history/summary")
+    fetch("https://fathur.pythonanywhere.com/api/history/summary")
       .then((res) => res.json())
       .then((data) => setCategorySummary(data));
   };
 
   const handleRemoveClick = (id_voucher) => {
-    fetch(`http://fathur.pythonanywhere.com/api/history/remove/${id_voucher}`, {
+    fetch(`https://fathur.pythonanywhere.com/api/history/remove/${id_voucher}`, {
       method: "DELETE",
     }).then(() => {
       fetchHistory(); // Refresh list setelah dihapus

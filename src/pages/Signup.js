@@ -20,7 +20,7 @@ function Signup() {
     };
 
     try {
-      const response = await fetch("http://fathur.pythonanywhere.com/api/signup", {
+      const response = await fetch("https://fathur.pythonanywhere.com/api/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
