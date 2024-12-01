@@ -36,7 +36,7 @@ function History() {
 
   const handleHomeClick = () => {
     // Menavigasi ke halaman history (misalnya)
-    navigate("/history"); // Sesuaikan dengan routing aplikasi React
+    navigate("/home"); // Sesuaikan dengan routing aplikasi React
   };
 
   const toggleSidebar = () => {

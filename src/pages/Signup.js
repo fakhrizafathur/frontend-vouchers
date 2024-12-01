@@ -40,6 +40,11 @@ function Signup() {
     }
   };
 
+  const handleLoginClick = () => {
+    // Menavigasi ke halaman history (misalnya)
+    navigate("/login");
+  };
+
   return (
     <div className="container">
       <h2>Signup</h2>
@@ -50,7 +55,7 @@ function Signup() {
         <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
         <input type="submit" value="Daftar" />
       </form>
-      <a href="/">Sudah punya akun? Login sekarang</a>
+      <a onClick={handleLoginClick}>Sudah punya akun? Login sekarang</a>
     </div>
   );
 }
